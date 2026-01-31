@@ -1,31 +1,77 @@
 @import "tailwindcss";
 
 :root {
-  /* Soltic Brand Colors */
-  --primary: #2C3E50; /* Deep Slate Blue */
-  --secondary: #F39C12; /* Vibrant Amber */
-  --accent: #1ABC9C; /* Cyan Teal */
-  --background: #F8F9FA; /* Off-White */
-  --foreground: #2C3E50; /* Using Primary as default text color */
+  /* Modern Dark Theme Palette */
+  --primary: #0f172a; /* Slate 900 - Deep Background */
+  --secondary: #3b82f6; /* Blue 500 - Primary Action */
+  --accent: #06b6d4; /* Cyan 500 - Highlights */
+  --vibrant: #f59e0b; /* Amber 500 - Energy/Solar */
+  --success: #10b981; /* Emerald 500 */
+  --glass-bg: rgba(30, 41, 59, 0.7); /* Translucent Slate */
+  --glass-border: rgba(255, 255, 255, 0.1);
+  
+  --background: #020617; /* Very Dark Slate */
+  --foreground: #f8fafc; /* Slate 50 */
 }
 
 @theme inline {
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
+  --color-vibrant: var(--vibrant);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-glass: var(--glass-bg);
+  --color-glass-border: var(--glass-border);
   
-  --font-sans: var(--font-open-sans);
-  --font-heading: var(--font-montserrat);
+  /* Extended Animations */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 3s ease-in-out infinite alternate;
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  @keyframes glow {
+    from { box-shadow: 0 0 10px -5px var(--accent); }
+    to { box-shadow: 0 0 25px 5px var(--accent); }
+  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  overflow-x: hidden;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography Overrides */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
 }

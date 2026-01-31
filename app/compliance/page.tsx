@@ -1,104 +1,144 @@
-import { Shield, BookOpen, UserCheck, Flag } from "lucide-react";
+import { Shield, BookOpen, UserCheck, Flag, CheckCircle2 } from "lucide-react";
 
 export default function Compliance() {
     return (
-        <div className="bg-white">
-            <div className="bg-slate-100 py-16 px-4 border-b border-gray-200">
-                <div className="max-w-4xl mx-auto text-center">
-                    <Shield className="w-16 h-16 text-primary mx-auto mb-6" />
-                    <h1 className="text-4xl font-bold font-heading text-primary mb-4">Compliance & Quality Assurance</h1>
-                    <p className="text-lg text-gray-600">
-                        We understand that in engineering, accuracy isn't optional—it's mandatory. Our workflows are designed to meet rigorous international standards.
+        <div className="min-h-screen pt-24 px-4 pb-20">
+            <div className="max-w-7xl mx-auto">
+                {/* Header */}
+                <div className="text-center mb-16 animate-fade-in-up">
+                    <div className="inline-flex p-4 rounded-full bg-white/5 mb-6 border border-white/10">
+                        <Shield className="w-10 h-10 text-success" />
+                    </div>
+                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Compliance & Quality</h1>
+                    <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                        In engineering, accuracy isn't optional—it's mandatory. Our workflows meets rigorous international standards.
                     </p>
                 </div>
-            </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
                     {/* USA Standards */}
-                    <div className="bg-white border-l-4 border-secondary pl-8 py-4 shadow-sm">
-                        <div className="flex items-center gap-4 mb-6">
-                            <Flag className="w-8 h-8 text-secondary" />
-                            <h2 className="text-2xl font-bold text-primary">USA Standards</h2>
+                    <div className="glass-panel p-10 rounded-2xl relative overflow-hidden">
+                        <div className="absolute top-0 right-0 p-4 opacity-10">
+                            <Flag className="w-32 h-32 text-white" />
                         </div>
-                        <ul className="space-y-4">
-                            <li className="flex flex-col">
-                                <span className="font-bold text-gray-800">NEC 2020 / 2023</span>
-                                <span className="text-sm text-gray-500">National Electrical Code compliance for all PV designs.</span>
+                        <div className="flex items-center gap-4 mb-8">
+                            <div className="p-3 bg-secondary/20 rounded-lg">
+                                <Flag className="w-8 h-8 text-secondary" />
+                            </div>
+                            <h2 className="text-3xl font-bold text-white">USA Standards</h2>
+                        </div>
+                        <ul className="space-y-6">
+                            <li className="flex gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+                                <div>
+                                    <span className="block font-bold text-white text-lg">NEC 2020 / 2023</span>
+                                    <span className="text-gray-400">National Electrical Code compliance for all PV designs.</span>
+                                </div>
                             </li>
-                            <li className="flex flex-col">
-                                <span className="font-bold text-gray-800">ASCE 7-16 / 7-22</span>
-                                <span className="text-sm text-gray-500">Minimum Design Loads and Associated Criteria for Buildings.</span>
+                            <li className="flex gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+                                <div>
+                                    <span className="block font-bold text-white text-lg">ASCE 7-16 / 7-22</span>
+                                    <span className="text-gray-400">Minimum Design Loads and Associated Criteria for Buildings.</span>
+                                </div>
                             </li>
-                            <li className="flex flex-col">
-                                <span className="font-bold text-gray-800">IBC / IRC</span>
-                                <span className="text-sm text-gray-500">International Building & Residential Codes.</span>
+                            <li className="flex gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+                                <div>
+                                    <span className="block font-bold text-white text-lg">IBC / IRC</span>
+                                    <span className="text-gray-400">International Building & Residential Codes.</span>
+                                </div>
                             </li>
-                            <li className="flex flex-col">
-                                <span className="font-bold text-gray-800">IFC</span>
-                                <span className="text-sm text-gray-500">International Fire Code (Access pathways & setback rules).</span>
+                            <li className="flex gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+                                <div>
+                                    <span className="block font-bold text-white text-lg">IFC</span>
+                                    <span className="text-gray-400">International Fire Code (Access pathways & setback rules).</span>
+                                </div>
                             </li>
                         </ul>
                     </div>
 
                     {/* UK Standards */}
-                    <div className="bg-white border-l-4 border-accent pl-8 py-4 shadow-sm">
-                        <div className="flex items-center gap-4 mb-6">
-                            <Flag className="w-8 h-8 text-accent" />
-                            <h2 className="text-2xl font-bold text-primary">UK Standards</h2>
+                    <div className="glass-panel p-10 rounded-2xl relative overflow-hidden">
+                        <div className="absolute top-0 right-0 p-4 opacity-10">
+                            <Flag className="w-32 h-32 text-white" />
                         </div>
-                        <ul className="space-y-4">
-                            <li className="flex flex-col">
-                                <span className="font-bold text-gray-800">BS 7671 (18th Edition)</span>
-                                <span className="text-sm text-gray-500">Requirements for Electrical Installations (IET Wiring Regulations).</span>
+                        <div className="flex items-center gap-4 mb-8">
+                            <div className="p-3 bg-accent/20 rounded-lg">
+                                <Flag className="w-8 h-8 text-accent" />
+                            </div>
+                            <h2 className="text-3xl font-bold text-white">UK Standards</h2>
+                        </div>
+                        <ul className="space-y-6">
+                            <li className="flex gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                                <div>
+                                    <span className="block font-bold text-white text-lg">BS 7671 (18th Edition)</span>
+                                    <span className="text-gray-400">Requirements for Electrical Installations (IET Wiring Regulations).</span>
+                                </div>
                             </li>
-                            <li className="flex flex-col">
-                                <span className="font-bold text-gray-800">G98 / G99</span>
-                                <span className="text-sm text-gray-500">Grid connection standards for distributed generation.</span>
+                            <li className="flex gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                                <div>
+                                    <span className="block font-bold text-white text-lg">G98 / G99</span>
+                                    <span className="text-gray-400">Grid connection standards for distributed generation.</span>
+                                </div>
                             </li>
-                            <li className="flex flex-col">
-                                <span className="font-bold text-gray-800">Part L</span>
-                                <span className="text-sm text-gray-500">Conservation of fuel and power (Building Regulations).</span>
+                            <li className="flex gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                                <div>
+                                    <span className="block font-bold text-white text-lg">Part L</span>
+                                    <span className="text-gray-400">Conservation of fuel and power (Building Regulations).</span>
+                                </div>
                             </li>
-                            <li className="flex flex-col">
-                                <span className="font-bold text-gray-800">PAS 1192 / ISO 19650</span>
-                                <span className="text-sm text-gray-500">BIM information management standards.</span>
+                            <li className="flex gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                                <div>
+                                    <span className="block font-bold text-white text-lg">PAS 1192 / ISO 19650</span>
+                                    <span className="text-gray-400">BIM information management standards.</span>
+                                </div>
                             </li>
                         </ul>
                     </div>
-
                 </div>
 
                 {/* QA Process */}
-                <div className="mt-24">
-                    <h2 className="text-3xl font-bold text-center text-primary mb-16">Our 3-Tier Quality Check Process</h2>
-                    <div className="relative flex flex-col md:flex-row justify-between items-center gap-8">
-                        {/* Connecting Line (Desktop) */}
-                        <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-200 -z-10 transform -translate-y-1/2"></div>
+                <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 to-accent/10 rounded-3xl blur-3xl"></div>
+                    <div className="relative glass-panel p-12 rounded-3xl border border-white/10">
+                        <h2 className="text-3xl font-bold text-center text-white mb-16">3-Tier Quality Assurance</h2>
 
-                        {/* Step 1 */}
-                        <div className="bg-white p-8 rounded-xl border border-gray-200 shadow-lg w-full md:w-1/3 text-center">
-                            <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl text-gray-600">1</div>
-                            <UserCheck className="w-10 h-10 text-primary mx-auto mb-4" />
-                            <h3 className="text-xl font-bold mb-2">Senior Drafter</h3>
-                            <p className="text-sm text-gray-600">Initial modeling and drafting based on client inputs and checklists.</p>
-                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative items-center">
+                            {/* Connector Line */}
+                            <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-y-1/2 z-0"></div>
 
-                        {/* Step 2 */}
-                        <div className="bg-white p-8 rounded-xl border-t-4 border-secondary shadow-lg w-full md:w-1/3 text-center transform md:scale-110">
-                            <div className="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
-                            <BookOpen className="w-10 h-10 text-secondary mx-auto mb-4" />
-                            <h3 className="text-xl font-bold mb-2">Design Engineer</h3>
-                            <p className="text-sm text-gray-600">Technical review for code compliance, load calculations, and system efficiency.</p>
-                        </div>
+                            {/* Step 1 */}
+                            <div className="relative z-10 bg-[#0f172a] p-8 rounded-2xl border border-white/5 hover:border-secondary/50 transition-colors text-center group">
+                                <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-secondary/20 transition-colors">
+                                    <UserCheck className="w-8 h-8 text-secondary" />
+                                </div>
+                                <h3 className="text-xl font-bold text-white mb-2">Senior Drafter</h3>
+                                <p className="text-sm text-gray-400">Initial modeling and drafting based on client inputs and checklists.</p>
+                            </div>
 
-                        {/* Step 3 */}
-                        <div className="bg-white p-8 rounded-xl border border-gray-200 shadow-lg w-full md:w-1/3 text-center">
-                            <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl text-gray-600">3</div>
-                            <Shield className="w-10 h-10 text-accent mx-auto mb-4" />
-                            <h3 className="text-xl font-bold mb-2">QC Manager</h3>
-                            <p className="text-sm text-gray-600">Final aesthetic and standards check before client delivery.</p>
+                            {/* Step 2 */}
+                            <div className="relative z-10 bg-[#0f172a] p-8 rounded-2xl border border-secondary/30 shadow-[0_0_30px_-10px_rgba(59,130,246,0.2)] text-center transform scale-105">
+                                <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <BookOpen className="w-8 h-8 text-secondary" />
+                                </div>
+                                <h3 className="text-xl font-bold text-white mb-2">Design Engineer</h3>
+                                <p className="text-sm text-gray-400">Technical review for code compliance, load calculations, and system efficiency.</p>
+                            </div>
+
+                            {/* Step 3 */}
+                            <div className="relative z-10 bg-[#0f172a] p-8 rounded-2xl border border-white/5 hover:border-accent/50 transition-colors text-center group">
+                                <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
+                                    <Shield className="w-8 h-8 text-accent" />
+                                </div>
+                                <h3 className="text-xl font-bold text-white mb-2">QC Manager</h3>
+                                <p className="text-sm text-gray-400">Final aesthetic and standards check before client delivery.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

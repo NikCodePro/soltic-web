@@ -36,12 +36,12 @@ export default function Navbar() {
                             </button>
 
                             {/* Dropdown Content */}
-                            <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden group-hover:block">
-                                <div className="py-1">
-                                    <Link href="/bim-services" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary border-b border-gray-100">
+                            <div className="absolute left-0 mt-2 w-56 rounded-xl shadow-xl glass-panel ring-1 ring-white/10 focus:outline-none hidden group-hover:block backdrop-blur-xl">
+                                <div className="py-2">
+                                    <Link href="/bim-services" className="block px-4 py-3 text-sm text-gray-300 hover:bg-white/10 hover:text-white border-b border-white/5 transition-colors">
                                         BIM Services
                                     </Link>
-                                    <Link href="/solar-services" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">
+                                    <Link href="/solar-services" className="block px-4 py-3 text-sm text-gray-300 hover:bg-white/10 hover:text-white transition-colors">
                                         Solar Engineering
                                     </Link>
                                 </div>
