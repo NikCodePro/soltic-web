@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Linkedin, Facebook, Twitter } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="bg-primary text-gray-300">
+        <footer className="bg-slate-900 text-gray-300 border-t border-slate-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Company Info */}
@@ -51,8 +51,8 @@ export default function Footer() {
                             <li className="flex items-start space-x-3">
                                 <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                                 <span>
-                                    123 Tech Park, Engineering Block,<br />
-                                    London, UK / New York, USA
+                                    3 Stanley Hall, 129-145 Botchergate,<br />
+                                    Carlisle CA1 1RZ
                                 </span>
                             </li>
                             <li className="flex items-center space-x-3">

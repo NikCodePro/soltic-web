@@ -27,8 +27,8 @@ export default function Contact() {
                         <button
                             onClick={() => setActiveTab('quote')}
                             className={`px-6 py-3 rounded-full text-sm font-bold transition-all ${activeTab === 'quote'
-                                    ? 'bg-secondary text-white shadow-md'
-                                    : 'text-gray-500 hover:text-primary'
+                                ? 'bg-secondary text-white shadow-md'
+                                : 'text-gray-500 hover:text-primary'
                                 }`}
                         >
                             Get a Quote
@@ -36,8 +36,8 @@ export default function Contact() {
                         <button
                             onClick={() => setActiveTab('partner')}
                             className={`px-6 py-3 rounded-full text-sm font-bold transition-all ${activeTab === 'partner'
-                                    ? 'bg-secondary text-white shadow-md'
-                                    : 'text-gray-500 hover:text-primary'
+                                ? 'bg-secondary text-white shadow-md'
+                                : 'text-gray-500 hover:text-primary'
                                 }`}
                         >
                             Partner With Us
@@ -121,6 +121,8 @@ export default function Contact() {
                         </div>
                     </div>
 
+
+
                     <div className="flex flex-col md:flex-row items-center md:items-start gap-4 p-6 bg-white rounded-xl shadow-sm">
                         <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
                             <Phone className="w-6 h-6 text-accent" />
@@ -129,6 +131,17 @@ export default function Contact() {
                             <h3 className="font-bold text-lg">Call Us</h3>
                             <p className="text-gray-600 mb-1">Mon-Fri, 9am - 6pm EST</p>
                             <a href="tel:+15551234567" className="text-primary font-bold hover:underline">+1 (555) 123-4567</a>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row items-center md:items-start gap-4 p-6 bg-white rounded-xl shadow-sm md:col-span-2 lg:col-span-1">
+                        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-blue-600"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+                        </div>
+                        <div>
+                            <h3 className="font-bold text-lg">Visit Us</h3>
+                            <p className="text-gray-600 mb-1">UK Office</p>
+                            <span className="text-primary font-bold">3 Stanley Hall, 129-145 Botchergate,<br />Carlisle CA1 1RZ</span>
                         </div>
                     </div>
                 </div>

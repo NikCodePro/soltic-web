@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  /* Modern Dark Theme Palette */
-  --primary: #0f172a; /* Slate 900 - Deep Background */
-  --secondary: #3b82f6; /* Blue 500 - Primary Action */
-  --accent: #06b6d4; /* Cyan 500 - Highlights */
-  --vibrant: #f59e0b; /* Amber 500 - Energy/Solar */
-  --success: #10b981; /* Emerald 500 */
-  --glass-bg: rgba(30, 41, 59, 0.7); /* Translucent Slate */
-  --glass-border: rgba(255, 255, 255, 0.1);
+  /* Modern Light Theme Palette */
+  --primary: #f8fafc; /* Slate 50 - Very Light Background */
+  --secondary: #2563eb; /* Blue 600 - Primary Action (Darker for contrast) */
+  --accent: #0891b2; /* Cyan 600 - Highlights */
+  --vibrant: #d97706; /* Amber 600 - Energy/Solar */
+  --success: #059669; /* Emerald 600 */
+  --glass-bg: rgba(255, 255, 255, 0.7); /* Translucent White */
+  --glass-border: rgba(0, 0, 0, 0.1);
   
-  --background: #020617; /* Very Dark Slate */
-  --foreground: #f8fafc; /* Slate 50 */
+  --background: #ffffff; /* Pure White */
+  --foreground: #0f172a; /* Slate 900 */
 }
 
 @theme inline {
