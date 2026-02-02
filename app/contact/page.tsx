@@ -129,8 +129,8 @@ export default function Contact() {
                         </div>
                         <div>
                             <h3 className="font-bold text-lg">Call Us</h3>
-                            <p className="text-gray-600 mb-1">Mon-Fri, 9am - 6pm EST</p>
-                            <a href="tel:+15551234567" className="text-primary font-bold hover:underline">+1 (555) 123-4567</a>
+                            <p className="text-gray-600 mb-1">Mon-Fri, 9am - 6pm GMT</p>
+                            <a href="tel:+447436900601" className="text-primary font-bold hover:underline">+44 7436 900601</a>
                         </div>
                     </div>
 
