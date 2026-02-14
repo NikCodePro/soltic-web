@@ -35,12 +35,12 @@ export default function Footer() {
                     <div>
                         <h4 className="text-white text-lg font-bold mb-4">Our Expertise</h4>
                         <ul className="space-y-2 text-sm">
-                            <li>Architectural BIM</li>
-                            <li>Structural BIM</li>
-                            <li>MEP Coordination</li>
-                            <li>Solar PV Design</li>
-                            <li>Energy Yield Reports</li>
-                            <li>Battery Storage (ESS)</li>
+                            <li><Link href="/services/architectural-bim-modeling" className="hover:text-accent transition-colors">Architectural BIM</Link></li>
+                            <li><Link href="/services/structural-bim-modeling" className="hover:text-accent transition-colors">Structural BIM</Link></li>
+                            <li><Link href="/services/mep-bim-coordination" className="hover:text-accent transition-colors">MEP Coordination</Link></li>
+                            {/* <li><Link href="/services/solar-pv-system-design" className="hover:text-accent transition-colors">Solar PV Design</Link></li> */}
+                            {/* <li><Link href="/services/energy-yield-analysis" className="hover:text-accent transition-colors">Energy Yield Reports</Link></li> */}
+                            <li><Link href="/services/battery-storage-design" className="hover:text-accent transition-colors">Battery Storage (ESS)</Link></li>
                         </ul>
                     </div>
 
