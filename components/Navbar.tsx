@@ -7,6 +7,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
+    const [isComplianceOpen, setIsComplianceOpen] = useState(false);
 
     return (
         <nav className="bg-white/90 backdrop-blur-md border-b border-gray-100 text-slate-800 shadow-sm sticky top-0 z-50 transition-all duration-300">
@@ -62,10 +63,37 @@ export default function Navbar() {
                             </div>
                         </div>
 
-                        <Link href="/compliance" className="font-medium hover:text-secondary transition-colors relative group">
-                            Compliance
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full"></span>
-                        </Link>
+                        {/* Compliance Dropdown */}
+                        <div className="relative group">
+                            <button
+                                className="flex items-center space-x-1 font-medium hover:text-secondary transition-colors focus:outline-none"
+                                onClick={() => setIsComplianceOpen(!isComplianceOpen)}
+                                onMouseEnter={() => setIsComplianceOpen(true)}
+                            >
+                                <Link href="/compliance">Compliance</Link>
+                                <ChevronDown className="w-4 h-4" />
+                            </button>
+                            <div
+                                className={`absolute left-0 mt-2 w-56 rounded-xl shadow-xl bg-white border border-gray-100 focus:outline-none transition-all duration-200 transform origin-top-left ${isComplianceOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:scale-100'}`}
+                                onMouseLeave={() => setIsComplianceOpen(false)}
+                            >
+                                <div className="p-2">
+                                    <Link href="/compliance" className="block px-4 py-3 rounded-lg text-sm text-slate-700 hover:bg-slate-50 hover:text-secondary transition-colors font-semibold">
+                                        All Regions
+                                    </Link>
+                                    <div className="h-px bg-gray-100 my-1"></div>
+                                    <Link href="/compliance/us" className="block px-4 py-3 rounded-lg text-sm text-slate-600 hover:bg-slate-50 hover:text-secondary transition-colors">
+                                        🇺🇸 United States
+                                    </Link>
+                                    <Link href="/compliance/uk" className="block px-4 py-3 rounded-lg text-sm text-slate-600 hover:bg-slate-50 hover:text-secondary transition-colors">
+                                        🇬🇧 United Kingdom
+                                    </Link>
+                                    <Link href="/compliance/asia" className="block px-4 py-3 rounded-lg text-sm text-slate-600 hover:bg-slate-50 hover:text-secondary transition-colors">
+                                        🌏 Asia Pacific
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
 
                         <Link
                             href="/contact"
@@ -135,6 +163,11 @@ export default function Navbar() {
                         >
                             Compliance
                         </Link>
+                        <div className="pl-4 border-l-2 border-gray-100 ml-4 space-y-1">
+                            <Link href="/compliance/us" className="block px-4 py-2 rounded-lg text-sm font-medium text-slate-500 hover:text-secondary transition-colors" onClick={() => setIsOpen(false)}>🇺🇸 United States</Link>
+                            <Link href="/compliance/uk" className="block px-4 py-2 rounded-lg text-sm font-medium text-slate-500 hover:text-secondary transition-colors" onClick={() => setIsOpen(false)}>🇬🇧 United Kingdom</Link>
+                            <Link href="/compliance/asia" className="block px-4 py-2 rounded-lg text-sm font-medium text-slate-500 hover:text-secondary transition-colors" onClick={() => setIsOpen(false)}>🌏 Asia Pacific</Link>
+                        </div>
                         <Link
                             href="/contact"
                             className="block px-4 py-3 mt-4 text-center rounded-lg text-base font-bold bg-secondary text-white hover:bg-blue-700 shadow-lg shadow-blue-500/20 transition-all"
