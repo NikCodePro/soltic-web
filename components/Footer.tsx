@@ -57,7 +57,7 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center space-x-3">
                                 <Mail className="w-5 h-5 text-secondary flex-shrink-0" />
-                                <a href="mailto:projects@soltic.com" className="hover:text-white">projects@soltic.com</a>
+                                <a href="mailto:info@solticsolutions.com" className="hover:text-white">info@solticsolutions.com</a>
                             </li>
                             <li className="flex items-center space-x-3">
                                 <Phone className="w-5 h-5 text-secondary flex-shrink-0" />

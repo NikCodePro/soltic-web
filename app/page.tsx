@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -66,7 +66,7 @@ export default function Home() {
                 className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6"
               >
                 <span className="w-2 h-2 rounded-full bg-secondary mr-2 animate-pulse" />
-                <span className="text-blue-700 text-xs sm:text-sm font-bold tracking-wider uppercase">Engineering Intelligence â€” UK & USA</span>
+                <span className="text-blue-700 text-xs sm:text-sm font-bold tracking-wider uppercase">Engineering Intelligence - UK & USA</span>
               </motion.div>
 
               <motion.h1
@@ -113,7 +113,7 @@ export default function Home() {
               >
                 <span className="flex items-center gap-1.5"><CheckCircle className="w-4 h-4 text-emerald-500" /> NEC & IBC Compliant</span>
                 <span className="flex items-center gap-1.5"><CheckCircle className="w-4 h-4 text-emerald-500" /> 24h Turnaround</span>
-                <span className="flex items-center gap-1.5"><CheckCircle className="w-4 h-4 text-emerald-500" /> LOD 300â€“500</span>
+                <span className="flex items-center gap-1.5"><CheckCircle className="w-4 h-4 text-emerald-500" /> LOD 300-500</span>
               </motion.div>
 
               {/* CTA Buttons */}
@@ -166,7 +166,7 @@ export default function Home() {
                         </div>
                         <div>
                           <div className="text-sm font-bold text-slate-800">BIM Modeling</div>
-                          <div className="text-[11px] text-slate-400">LOD 300â€“500</div>
+                          <div className="text-[11px] text-slate-400">LOD 300-500</div>
                         </div>
                       </div>
                       {/* Mini wireframe illustration */}
@@ -389,7 +389,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects & Expertise â€” Scroll-Hijacking Carousel */}
+      {/* Projects & Expertise - Scroll-Hijacking Carousel */}
       <CarouselSection />
 
       {/* Inline Contact Form */}
