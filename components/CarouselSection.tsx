@@ -89,7 +89,7 @@ export default function CarouselSection() {
                             priority={i === 0}
                         />
                         {/* Dark overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/40" />
+                        <div className="absolute inset-0 bg-linear-to-r from-slate-900/90 via-slate-900/70 to-slate-900/40" />
 
                         {/* Slide content */}
                         <div className="relative z-10 h-full flex items-center">

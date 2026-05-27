@@ -33,9 +33,18 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-to-br from-white via-blue-50/30 to-amber-50/20">
-        {/* Subtly moving mesh background */}
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-slate-950">
+        {/* Background image plus animated objects */}
         <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-services.png"
+            alt="Solar and BIM engineering hero background"
+            fill
+            priority
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-slate-950/55" />
+
           <motion.div
             animate={{ x: [0, 60, 0], y: [0, 40, 0] }}
             transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
@@ -58,22 +67,22 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left: Text Content */}
-            <div className="order-2 lg:order-1 text-center lg:text-left">
+            <div className="order-2 lg:order-1 text-center lg:text-left text-white">
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6"
+                className="inline-flex items-center px-4 py-2 rounded-full bg-slate-800/80 border border-white/10 mb-6"
               >
-                <span className="w-2 h-2 rounded-full bg-secondary mr-2 animate-pulse" />
-                <span className="text-blue-700 text-xs sm:text-sm font-bold tracking-wider uppercase">Engineering Intelligence - UK & USA</span>
+                <span className="w-2 h-2 rounded-full bg-white/90 mr-2 animate-pulse" />
+                <span className="text-xs sm:text-sm font-bold tracking-wider uppercase text-slate-100">Engineering Intelligence - UK & USA</span>
               </motion.div>
 
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.15, duration: 0.7 }}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-6xl font-bold leading-tight mb-6 text-slate-900"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-6xl font-bold leading-tight mb-6 text-white"
               >
                 Your Trusted Partner for
                 <span
@@ -99,9 +108,9 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35, duration: 0.7 }}
-                className="text-lg md:text-xl text-slate-600 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
+                className="text-lg md:text-xl text-slate-100 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
               >
-                We deliver precision-driven <strong className="text-slate-800">BIM Modeling</strong> and <strong className="text-slate-800">Solar PV Engineering</strong> services, helping construction firms across the <strong className="text-slate-800">US & UK</strong> build faster, smarter, and code-compliant.
+                We deliver precision-driven <strong className="text-white">BIM Modeling</strong> and <strong className="text-white">Solar PV Engineering</strong> services, helping construction firms across the <strong className="text-white">US & UK</strong> build faster, smarter, and code-compliant.
               </motion.p>
 
               {/* Quick Trust Indicators */}
@@ -109,11 +118,11 @@ export default function Home() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
-                className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 mb-10 text-sm text-slate-500"
+                className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 mb-10 text-sm text-slate-200"
               >
-                <span className="flex items-center gap-1.5"><CheckCircle className="w-4 h-4 text-emerald-500" /> NEC & IBC Compliant</span>
-                <span className="flex items-center gap-1.5"><CheckCircle className="w-4 h-4 text-emerald-500" /> 24h Turnaround</span>
-                <span className="flex items-center gap-1.5"><CheckCircle className="w-4 h-4 text-emerald-500" /> LOD 300-500</span>
+                <span className="flex items-center gap-1.5"><CheckCircle className="w-4 h-4 text-emerald-300" /> NEC & IBC Compliant</span>
+                <span className="flex items-center gap-1.5"><CheckCircle className="w-4 h-4 text-emerald-300" /> 24h Turnaround</span>
+                <span className="flex items-center gap-1.5"><CheckCircle className="w-4 h-4 text-emerald-300" /> LOD 300-500</span>
               </motion.div>
 
               {/* CTA Buttons */}
@@ -268,41 +277,6 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
-
-          {/* Service Highlight Ticker */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9, duration: 0.6 }}
-            className="mt-16 lg:mt-20 border-t border-slate-100 pt-10"
-          >
-            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest text-center mb-6">What We Deliver</p>
-            <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-              {[
-                { icon: Building2, label: "Architectural BIM", color: "text-blue-600 bg-blue-50 border-blue-100", href: "/services/architectural-bim-modeling" },
-                { icon: Layers, label: "Structural Modeling", color: "text-indigo-600 bg-indigo-50 border-indigo-100", href: "/services/structural-bim-modeling" },
-                { icon: Zap, label: "MEP Coordination", color: "text-cyan-600 bg-cyan-50 border-cyan-100", href: "/services/mep-bim-coordination" },
-                { icon: Sun, label: "Solar PV Permits", color: "text-amber-600 bg-amber-50 border-amber-100", href: "/solar-services" },
-                { icon: Shield, label: "Clash Detection", color: "text-emerald-600 bg-emerald-50 border-emerald-100", href: "/services/clash-detection" },
-                { icon: FileCheck, label: "Shop Drawings", color: "text-violet-600 bg-violet-50 border-violet-100", href: "/services/shop-drawings" },
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1 + i * 0.08 }}
-                >
-                  <Link
-                    href={item.href}
-                    className={`flex items-center gap-2 px-4 py-2.5 rounded-full border text-sm font-semibold ${item.color} hover:shadow-md hover:scale-105 transition-all cursor-pointer`}
-                  >
-                    <item.icon className="w-4 h-4" />
-                    {item.label}
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </section>
 
